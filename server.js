@@ -3,7 +3,7 @@
 var http = require('http');
 var path = require('path');
 var braintree = require('braintree');
-var gateway = braintree.connect({environment: braintree.Environment.Production,
+var gateway = braintree.connect({environment: braintree.Environment.Sandbox,
 	//merchantId: "tywncdswf825nrc9",
 	//publicKey: "crhds8qwnxhjt9wv",
 	//privateKey: "7c8a8aeea3a710d8312d3f669530b6e6"
