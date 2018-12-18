@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" ng-app>
+  <head>
+      <script> 
+          ;(function(a,t,o,m,s){a[m]=a[m]||[];a[m].push({t:new Date().getTime(),event:'snippetRun'});var f=t.getElementsByTagName(o)[0],e=t.createElement(o),d=m!=='paypalDDL'?'&m='+m:'';e.async=!0;e.src='https://www.paypal.com/tagmanager/pptm.js?id='+s+d;f.parentNode.insertBefore(e,f);})(window,document,'script','paypalDDL','f64bc2d9-f018-4c80-9109-1fbdd226b3f0');
+        </script> 
+    <title>PayPal EC BT Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+    <style>
+      body {
+        padding-top: 60px;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <div class="container" ng-controller="ChatController">
+      <div class="navbar navbar-fixed-top navbar-inverse">
+        <div class="navbar-inner">
+          <div class="pull-right">
+            <a href="https://c9.io" class="brand">Demo Showcasing PayPal EC BT</a>
+          </div>
+        </div>
+      </div>
+      <div class="page-header">
+        <h1>PayPal EC BT SDK Demo</h1>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <p>This is a demo server to showcase PayPal Express Checkout using Braintree SDK</p>
+        </div>
+    </div>
+  </div>
+  <!--<span id='lippButton'></span>
+  <script src='https://www.paypalobjects.com/js/external/api.js'></script>
+  <script>
+  paypal.use( ['login'], function (login) {
+  login.render ({
+  "appid":"ATzREHhD3fqYOEq3Sk2c2CChqSQV3bFkYM4HV3h6m9NBE2FPkkJvGk-OESOjhimpLaB_7EN0bMz140-G",
+  "authend":"sandbox",
+  "scopes":"openid https://uri.paypal.com/services/wallet/balance-accounts/read",
+  "containerid":"lippButton",
+  "locale":"en-us",
+  "returnurl":"https://android-ec-bt-nodejsweb.herokuapp.com/return"
+});
+});
+</script>--> 
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  
+<!--<div id='paypal-muse-button-container'></div>
+
+<script src='https://www.paypalobjects.com/muse/partners/muse-button-bundle.js'></script>
+<script>
+  options = {
+    onContainerCreate: callback,
+    hn: 'foo.com',
+    partner_name: 'Singapore Test Partner',
+    bn_code: 'SG_Test_Partner',
+    styles: {
+        button: {
+           color: 'white',
+           background: 'blue',
+           ':hover': {
+               background: 'blue'
+           }
+        }
+    },
+    defaultIncentives: [
+      'credit',
+      'venmo'
+    ]
+  }
+
+  function returningUser() {
+   // var user = dbCall().then(function (res) {
+     // if(res.user) {
+        options.cid = 'f64bc2d9-f018-4c80-9109-1fbdd226b3f0';
+      //}
+      MUSEButton('paypal-muse-button-container', options)
+    //})
+  }
+
+  function callback(containerId) {
+      console.log(containerId)
+      options.cid = containerId
+  }
+
+  //MUSEButton('paypal-muse-button-container', options);
+  returningUser();    
+</script>-->
+
+<div id="paypal-button"></div>
+<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script>
+  paypal.Button.render({
+    // Configure environment
+    env: 'sandbox',
+    client: {
+      sandbox: 'demo_sandbox_client_id',
+      production: 'demo_production_client_id'
+    },
+    // Customize button (optional)
+    locale: 'en_US',
+    style: {
+      size: 'small',
+      color: 'gold',
+      shape: 'pill',
+    },
+    // Set up a payment
+    payment: function(data, actions) {
+      return actions.payment.create({
+        transactions: [{
+          amount: {
+            total: '0.01',
+            currency: 'USD'
+          }
+        }]
+      });
+    },
+    // Execute the payment
+    onAuthorize: function(data, actions) {
+      return actions.payment.execute().then(function() {
+        // Show a confirmation message to the buyer
+        window.alert('Thank you for your purchase!');
+      });
+    }
+  }, '#paypal-button');
+
+</script>
+
+
+</body>
+</html>
