@@ -328,7 +328,7 @@ router.post("/checkout", function (req, res) {
 	console.log(nonce);
 	var payLoad = buildbtPaymentRequestPayload(req.body);
 	payLoad.paymentMethodNonce = nonce;
-	payLoad.options.storeInVaultOnSuccess = true;
+	//payLoad.options.storeInVaultOnSuccess = true;
 	//payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
@@ -343,9 +343,9 @@ router.post("/checkout", function (req, res) {
 		  console.log("Inside success. Transaction ID is :"+result.transaction.id);
 		  console.log("Result is : "+JSON.stringify(result));
 		  console.log("PayPal paymentID is :"+result.transaction.paypal.paymentId);
-		  console.log("Customer ID is :",result.customer.id);
-		  console.log("Customer Payment Method Token is :",result.customer.paymentMethods[0].token);
-		  res.send("<h1>Success! Transaction ID: " + result.customer.id + "</h1>");
+		  //console.log("Customer ID is :",result.customer.id);
+		  //console.log("Customer Payment Method Token is :",result.customer.paymentMethods[0].token);
+		  res.send("<h1>Success! Transaction ID: " + result.transaction.id + "</h1>");
 		} else {
 		  console.log("Inside result is false");
 		  console.log("Result is : "+JSON.stringify(result));

@@ -60,30 +60,8 @@ exports.getCreateBTPaymentsPayLoadTemplate = function()
 return {
 		amount: "1.0",
 		orderId: "Mapped to PayPal Invoice Number",
-		customer: {id:"SaurabhN"},
-		billing: {
-			firstName: "Saurabh",
-			lastName: "Nigam",
-			company: "Braintree",
-			streetAddress: "1 Main St",
-			locality: "Bangalore",
-			region: "Karnataka",
-			postalCode: "560102",
-			countryCodeAlpha2: "IN"
-		},
-		shipping: {
-			firstName: "Saurabh",
-			lastName: "Nigam",
-			company: "Braintree",
-			streetAddress: "1 Main St",
-			locality: "Bangalore",
-			region: "karnataka",
-			postalCode: "560102",
-			countryCodeAlpha2: "IN"
-		},
 		options: {
-			submitForSettlement: true,
-			storeInVaultOnSuccess: true
+			submitForSettlement: true
 		},
 		
 	}
