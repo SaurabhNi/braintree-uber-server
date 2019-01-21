@@ -60,6 +60,7 @@ exports.getCreateBTPaymentsPayLoadTemplate = function()
 return {
 		amount: "10.0",
 		orderId: "Mapped to PayPal Invoice Number",
+		customerId:"5200964909",
 		options: {
 			submitForSettlement: true
 		},
