@@ -328,7 +328,7 @@ router.post("/checkout", function (req, res) {
 	console.log(nonce);
 	var payLoad = buildbtPaymentRequestPayload(req.body);
 	payLoad.paymentMethodNonce = nonce;
-	payLoad.options.storeInVault = true;
+	payLoad.options.storeInVaultOnSuccess = true;
 	//payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
