@@ -8,8 +8,8 @@ var gateway = braintree.connect({environment: braintree.Environment.Sandbox,
 	//publicKey: "crhds8qwnxhjt9wv",
 	//privateKey: "7c8a8aeea3a710d8312d3f669530b6e6"
 	//accessToken: 'access_token$sandbox$twqz54969tjcvnzb$135fdf7d7c6d230b586fe0a8dcf647a4'
-	accessToken: 'access_token$sandbox$cmsjrxqjrjzbcz2r$3ea9b37593fb87eccaa70d92ddf6babf'
-	//accessToken: 'access_token$production$t2kz2xvnj6qz54cr$c74d08d4cd2a22d24146cdfc62f5489f'
+	//accessToken: 'access_token$sandbox$cmsjrxqjrjzbcz2r$3ea9b37593fb87eccaa70d92ddf6babf'
+	accessToken: 'access_token$production$t2kz2xvnj6qz54cr$c74d08d4cd2a22d24146cdfc62f5489f'
 });
 
 var async = require('async');
@@ -328,7 +328,7 @@ router.post("/checkout", function (req, res) {
 	console.log(nonce);
 	var payLoad = buildbtPaymentRequestPayload(req.body);
 	payLoad.paymentMethodNonce = nonce;
-	//payLoad.options.storeInVaultOnSuccess = true;
+	payLoad.options.storeInVault = true;
 	//payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
