@@ -67,7 +67,7 @@ return {
 					sender_account_id:'L8V9WEX8C4PBL',
 					sender_first_name:'Amrit',
 				  sender_last_name:'Presanna Kumar',
-					sender_email:'amritpk@gmail.com',
+					sender_email:'amritpk+paypal1@gmail.com',
 					sender_country_code:'IN'
 					}
 				}
