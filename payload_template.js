@@ -64,10 +64,10 @@ return {
 			submitForSettlement: true,
 			paypal:{
 				supplementaryData:{
-					sender_account_id:'L8V9WEX8C4PBL',
-					sender_first_name:'Amrit',
-				  sender_last_name:'Presanna Kumar',
-					sender_email:'amritpk+paypal1@gmail.com',
+					sender_account_id:'A12345N343',
+					sender_first_name:'Saurabh',
+				  sender_last_name:'Nigam',
+					sender_email:'saunig@gmail.com',
 					sender_country_code:'IN'
 					}
 				}
