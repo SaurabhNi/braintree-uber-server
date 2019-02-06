@@ -59,9 +59,9 @@ exports.getCreateBTPaymentsPayLoadTemplate = function()
 {
 return {
 		amount: "10.0",
-		orderId: "Mapped to PayPal Invoice Number",
-		options: {
-			submitForSettlement: true
+		orderId: "Mapped to PayPal Invoice Number"
+		//options: {
+		//	submitForSettlement: true
 			// paypal:{
 			// 	supplementaryData:{
 			// 		sender_account_id:'A12345N343',
@@ -71,6 +71,6 @@ return {
 			// 		sender_country_code:'IN'
 			// 		}
 			// 	}
-			},
+		//	},
 		}
 }
