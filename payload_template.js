@@ -61,7 +61,7 @@ return {
 		amount: "10.0",
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
-		//	submitForSettlement: true
+			submitForSettlement: true
 			// paypal:{
 			// 	supplementaryData:{
 			// 		sender_account_id:'A12345N343',
