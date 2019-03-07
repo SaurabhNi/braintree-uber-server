@@ -436,19 +436,32 @@ router.post("/basetup", function (req, res) {
 				}
 				}
 	  }, function (err, result) {
-		
-		if(result.success)
-		{
-			// customer is successfully vaulted
-			console.log("Customer ID is :",result.customer.id);
-			console.log("Customer Payment Method Token is :",result.customer.paymentMethods[0].token);
-			res.send("<h1>Success! Transaction ID: " + result.customer.id + "</h1>");
-			
-		// e.g 160923
-	  
-		
+		if (err) {
+			console.log("Inside error stream");
+			console.log(err.type); 
+   			console.log(err.name); 
+    		console.log(err.message);
+			res.send("<h1>Error:  " + err + "</h1>");
+		} else if (result.success) {
+		  console.log("Inside success. Transaction ID is :"+result.customer.id);
+		  console.log("Result is : "+JSON.stringify(result));
+		  //console.log("PayPal paymentID is :"+result.transaction.paypal.paymentId);
+		  res.send("<h1>Success! Transaction ID: " + result.customer.id + "</h1>");
+		} else {
+		  console.log("Inside result is false");
+		  console.log("Result is : "+JSON.stringify(result));
+		  //console.log("Result transaction id is : "+result.transaction.id);
+		  var deepErrors = result.errors.deepErrors();
+		  for (var i in deepErrors) {
+			if (deepErrors.hasOwnProperty(i)) {
+			  console.log(deepErrors[i].attribute);
+			  console.log(deepErrors[i].code);
+			  console.log(deepErrors[i].message);
+			}
+		  }	
+		  console.log("Error is :"+result.message);
+		 // res.send("<h1>Error:  " + result.transaction.id + "</h1>");
 		}
-		
 	  });
 
 
