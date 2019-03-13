@@ -428,14 +428,8 @@ router.post("/basetup", function (req, res) {
 	gateway.customer.create({
 		"firstName": "Saurabh",
 		"lastName": "Nigam",
-		"paymentMethodNonce": nonce,
-		"options": {
-			"paypal​": {
-				"supplementary_data": 
-				{ "sender_account_id": "ABCD1234", "sender_first_name": "Saurabh", "sender_last_name": "Nigam", "sender_email": "sanigam@paypal.com", "sender_phone": "+919880288004"}
-				}
-				}
-	  }, function (err, result) {
+		"paymentMethodNonce": nonce
+		}, function (err, result) {
 		if (err) {
 			console.log("Inside error stream");
 			console.log(err.type); 
