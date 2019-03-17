@@ -383,7 +383,8 @@ router.post("/baCheckout", function (req, res) {
 	//payLoad.paymentMethodNonce = nonce;
 	payLoad.customerId=customerID;
 	//payLoad.deviceData=req.body.deviceData;
-	//payLoad.deviceData = req.body.deviceData;
+	console.log(req.body.deviceData);
+	payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
 	gateway.transaction.sale(payLoad, function (err, result) {

@@ -61,16 +61,16 @@ return {
 		amount: "10.0",
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
-			submitForSettlement: true
-			// paypal:{
-			// 	supplementaryData:{
-			// 		sender_account_id:'A12345N343',
-			// 		sender_first_name:'Saurabh',
-			// 	  sender_last_name:'Nigam',
-			// 		sender_email:'saunig@gmail.com',
-			// 		sender_country_code:'IN'
-			// 		}
-			// 	}
-			},
+			submitForSettlement: true,
+			"paypal":{
+			"supplementaryData":{
+			"sender_account_id":"A12345N343",
+			"sender_first_name":"Saurabh",
+	 	  "sender_last_name":"Nigam",
+			"sender_email":"saunig@gmail.com",
+			"sender_country_code":"IN"
+	 		}
 		}
+}
+}
 }
