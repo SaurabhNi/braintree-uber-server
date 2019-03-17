@@ -387,35 +387,46 @@ router.post("/baCheckout", function (req, res) {
 	payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
-	gateway.transaction.sale(payLoad, function (err, result) {
-		if (err) {
-			console.log("Inside error stream");
-			console.log(err.type); 
-   			console.log(err.name); 
-    		console.log(err.message);
-			res.send("<h1>Error:  " + err + "</h1>");
-		} else if (result.success) {
-		  console.log("Inside success. Transaction ID is :"+result.transaction.id);
-		  console.log("Result is : "+JSON.stringify(result));
-		  console.log("PayPal paymentID is :"+result.transaction.paypal.paymentId);
-		  res.send("<h1>Success! Transaction ID: " + result.transaction.id + "</h1>");
+	gateway.transaction.submitForSettlement("49xw5838", "20", function (err, result) {
+		if (result.success) {
+			var settledTransaction = result.transaction;
+			console.log(settledTransaction);
+			console.log(JSON.stringify(result));
 		} else {
-		  console.log("Inside result is false");
-		  console.log("Result is : "+JSON.stringify(result));
-		  console.log("Result transaction id is : "+result.transaction.id);
-		  var deepErrors = result.errors.deepErrors();
-		  for (var i in deepErrors) {
-			if (deepErrors.hasOwnProperty(i)) {
-			  console.log(deepErrors[i].attribute);
-			  console.log(deepErrors[i].code);
-			  console.log(deepErrors[i].message);
-			}
-		  }	
-		  console.log("Error is :"+result.message);
-		  res.send("<h1>Error:  " + result.transaction.id + "</h1>");
+			console.log(result.errors);
 		}
-	  });
+	});
 });
+
+// 	gateway.transaction.sale(payLoad, function (err, result) {
+// 		if (err) {
+// 			console.log("Inside error stream");
+// 			console.log(err.type); 
+//    			console.log(err.name); 
+//     		console.log(err.message);
+// 			res.send("<h1>Error:  " + err + "</h1>");
+// 		} else if (result.success) {
+// 		  console.log("Inside success. Transaction ID is :"+result.transaction.id);
+// 		  console.log("Result is : "+JSON.stringify(result));
+// 		  console.log("PayPal paymentID is :"+result.transaction.paypal.paymentId);
+// 		  res.send("<h1>Success! Transaction ID: " + result.transaction.id + "</h1>");
+// 		} else {
+// 		  console.log("Inside result is false");
+// 		  console.log("Result is : "+JSON.stringify(result));
+// 		  console.log("Result transaction id is : "+result.transaction.id);
+// 		  var deepErrors = result.errors.deepErrors();
+// 		  for (var i in deepErrors) {
+// 			if (deepErrors.hasOwnProperty(i)) {
+// 			  console.log(deepErrors[i].attribute);
+// 			  console.log(deepErrors[i].code);
+// 			  console.log(deepErrors[i].message);
+// 			}
+// 		  }	
+// 		  console.log("Error is :"+result.message);
+// 		  res.send("<h1>Error:  " + result.transaction.id + "</h1>");
+// 		}
+// 	  });
+// });
 
 
 router.post("/basetup", function (req, res) {
