@@ -394,6 +394,7 @@ router.post("/baCheckout", function (req, res) {
 			console.log(JSON.stringify(result));
 		} else {
 			console.log(result.errors);
+			console.log(JSON.stringify(result));
 		}
 	});
 });
