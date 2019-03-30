@@ -63,14 +63,7 @@ return {
 		options: {
 			submitForSettlement: false,
 			"paypal":{
-			"payee_email":"sanigam-facilitator@paypal.com",
-			"supplementaryData":{
-			"sender_account_id":"A12345N343",
-			"sender_first_name":"Saurabh",
-	 	  "sender_last_name":"Nigam",
-			"sender_email":"saunig@gmail.com",
-			"sender_country_code":"IN"
-	 		}
+			"payee_email":"sanigam-facilitator@paypal.com"
 		}
 }
 }
