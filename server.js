@@ -414,7 +414,8 @@ router.post("/baCheckout", function (req, res) {
 			console.log("Inside error stream");
 			console.log(err.type); 
    			console.log(err.name); 
-    		console.log(err.message);
+				console.log(err.message);
+				console.log(JSON.stringify(err));
 			res.send("<h1>Error:  " + err + "</h1>");
 		} else if (result.success) {
 		  console.log("Inside success. Transaction ID is :"+result.transaction.id);
