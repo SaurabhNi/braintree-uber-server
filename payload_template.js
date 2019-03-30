@@ -61,7 +61,7 @@ return {
 		amount: "10.0",
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
-			submitForSettlement: false
+			submitForSettlement: false,
 			"paypal":{
 			"payee_email":"sanigam-facilitator@paypal.com"
 		}
