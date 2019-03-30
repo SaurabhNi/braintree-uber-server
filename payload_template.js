@@ -62,9 +62,9 @@ return {
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
 			submitForSettlement: false
-			//"paypal":{
-			//"payee_email":"sanigam-facilitator@paypal.com"
-		//}
+			"paypal":{
+			"payee_email":"sanigam-facilitator@paypal.com"
+		}
 }
 }
 }
