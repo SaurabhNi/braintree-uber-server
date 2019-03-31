@@ -138,7 +138,7 @@ function buildbtPaymentRequestPayload(data) {
 	console.log(data);
 	var template = btPaymentRequestPayLoadTemplate;
 		template.amount = data.total;
-		//template.merchantAccountId = data.currency;
+		template.merchantAccountId = data.currency;
 		
 		//template.transactions[0].amount.details.subtotal = data.subtotal
 		//template.transactions[0].amount.details.shipping_discount = data.shipping_discount
