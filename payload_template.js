@@ -63,7 +63,10 @@ return {
 		options: {
 			submitForSettlement: false,
 		"paypal":{
-		"payee_email":"sanigam-facilitator@paypal.com"
+		"payee":
+		{
+			"email":"sanigam-facilitator@paypal.com"
+		}
 		}
 }
 }
