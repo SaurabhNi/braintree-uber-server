@@ -63,10 +63,7 @@ return {
 		options: {
 			submitForSettlement: false,
 		"paypal":{
-		"payee":
-		{
-			"email":"sanigam-facilitator@paypal.com"
-		}
+		"description":"Your Uber ride fare"
 		}
 }
 }
