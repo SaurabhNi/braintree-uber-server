@@ -17,9 +17,9 @@ var braintree = require('braintree');
 
 var gateway = braintree.connect({
 	environment:  braintree.Environment.Sandbox,
-	merchantId:   'tywncdswf825nrc9',
-	publicKey:    'crhds8qwnxhjt9wv',
-	privateKey:   '7c8a8aeea3a710d8312d3f669530b6e6'
+	merchantId:   'wcb3g64w3fb9t4ts',
+	publicKey:    'zh8nbdc3k7dwcgpv',
+	privateKey:   '123623b9c6f8982ceb4ffa826aeed2c0'
 });
 
 var async = require('async');
