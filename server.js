@@ -3,7 +3,7 @@
 var http = require('http');
 var path = require('path');
 var braintree = require('braintree');
-//var gateway = braintree.connect({environment: braintree.Environment.Sandbox,
+var gateway = braintree.connect({environment: braintree.Environment.Production,
 	//merchantId: "tywncdswf825nrc9",
 	//publicKey: "crhds8qwnxhjt9wv",
 	//privateKey: ""
@@ -12,15 +12,15 @@ var braintree = require('braintree');
 	//privateKey: "36dad87c9d0e6f383bddc5fe5a06f184"
 	//accessToken: 'access_token$sandbox$twqz54969tjcvnzb$135fdf7d7c6d230b586fe0a8dcf647a4'
 	//accessToken: 'access_token$sandbox$cmsjrxqjrjzbcz2r$3ea9b37593fb87eccaa70d92ddf6babf'
-	//accessToken: 'access_token$production$t2kz2xvnj6qz54cr$c74d08d4cd2a22d24146cdfc62f5489f'
-//});
-
-var gateway = braintree.connect({
-	environment:  braintree.Environment.Sandbox,
-	merchantId:   'wcb3g64w3fb9t4ts',
-	publicKey:    'zh8nbdc3k7dwcgpv',
-	privateKey:   '123623b9c6f8982ceb4ffa826aeed2c0'
+	accessToken: 'access_token$production$t2kz2xvnj6qz54cr$c74d08d4cd2a22d24146cdfc62f5489f'
 });
+
+//var gateway = braintree.connect({
+	//environment:  braintree.Environment.Sandbox,
+	//merchantId:   'wcb3g64w3fb9t4ts',
+	//publicKey:    'zh8nbdc3k7dwcgpv',
+	//privateKey:   '123623b9c6f8982ceb4ffa826aeed2c0'
+//});
 
 var async = require('async');
 var socketio = require('socket.io');
