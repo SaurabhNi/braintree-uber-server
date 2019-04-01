@@ -64,7 +64,7 @@ return {
 			submitForSettlement: false,
 		"paypal":{
 		"description":"Your Uber ride fare",
-		"payee_email":"Mario1267@gmail.com"
+		"payee_email":"paypalgbp@paypal.com"
 		}
 }
 }
