@@ -61,11 +61,11 @@ return {
 		amount: "10.0",
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
-			submitForSettlement: false,
-		"paypal":{
-		"description":"Your Uber ride fare",
-		"payee_email":"sanigam-facilitator@paypal.com"
-		}
+			submitForSettlement: false
+		//"paypal":{
+		//"description":"Your Uber ride fare",
+		//"payee_email":"sanigam-facilitator@paypal.com"
+		//}
 }
 }
 }
