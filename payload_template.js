@@ -63,8 +63,7 @@ return {
 		options: {
 			submitForSettlement: true,
 		"paypal":{
-		"description":"Your Uber ride fare",
-		"payee_email":"testbaflows@paypal.com"
+		"description":"Your Uber ride fare"
 		}
 }
 }
