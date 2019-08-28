@@ -446,7 +446,7 @@ router.post("/baCheckout", function (req, res) {
 	payLoad.customerId=customerID;
 	//payLoad.deviceData=req.body.deviceData;
 	console.log(req.body.deviceData);
-	//payLoad.deviceData = req.body.deviceData;
+	payLoad.deviceData = req.body.deviceData;
 	console.log(payLoad);
 
 // 	gateway.transaction.submitForSettlement("jjfdq133", "80", function (err, result) {
