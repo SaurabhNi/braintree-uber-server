@@ -69,7 +69,7 @@ return {
 		"description":"Your Uber ride fare"
 		//"payee_email":"sanigam-facilitator@paypal.com"
 		},
-		storeInVaultOnSuccess : true
+		storeInVault : true
 }
 }
 }
