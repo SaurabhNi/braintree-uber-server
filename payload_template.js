@@ -62,6 +62,9 @@ return {
 		orderId: "Mapped to PayPal Invoice Number",
 		options: {
 			submitForSettlement: true,
+			customer:{
+				id: "Meenakshi_Nigam"
+			},
 		"paypal":{
 		"description":"Your Uber ride fare"
 		//"payee_email":"sanigam-facilitator@paypal.com"
