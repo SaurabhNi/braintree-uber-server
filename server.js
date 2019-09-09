@@ -4,12 +4,12 @@ var http = require('http');
 var path = require('path');
 var braintree = require('braintree');
 var gateway = braintree.connect({environment: braintree.Environment.Sandbox,
-	//merchantId: "tywncdswf825nrc9",
-	//publicKey: "crhds8qwnxhjt9wv",
-	//privateKey: "7c8a8aeea3a710d8312d3f669530b6e6"
-	merchantId: "pqrrj4rxdhnvjfd8",
-	publicKey: "sybw32bh6p78mzh7",
-	privateKey: "080407c137fc70cadc36ed46507ce720"
+	merchantId: "tywncdswf825nrc9",
+	publicKey: "crhds8qwnxhjt9wv",
+	privateKey: "7c8a8aeea3a710d8312d3f669530b6e6"
+	//merchantId: "pqrrj4rxdhnvjfd8",
+	//publicKey: "sybw32bh6p78mzh7",
+	//privateKey: "080407c137fc70cadc36ed46507ce720"
 	//accessToken: 'access_token$sandbox$twqz54969tjcvnzb$135fdf7d7c6d230b586fe0a8dcf647a4'
 	//accessToken: 'access_token$sandbox$cmsjrxqjrjzbcz2r$3ea9b37593fb87eccaa70d92ddf6babf'
 	//accessToken: 'access_token$production$t2kz2xvnj6qz54cr$c74d08d4cd2a22d24146cdfc62f5489f'
